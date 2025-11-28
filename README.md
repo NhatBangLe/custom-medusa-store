@@ -10,7 +10,7 @@
 
 `npx medusa db:migrate`
 
-## Step 4: Create Admin user
+## Step 4: Create Admin user (optional)
 
 Email: admin@example.com, password: supersecret
 
