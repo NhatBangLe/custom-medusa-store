@@ -12,9 +12,14 @@ module.exports = defineConfig({
       jwtSecret: process.env.JWT_SECRET || "supersecret",
       cookieSecret: process.env.COOKIE_SECRET || "supersecret",
     },
-    databaseDriverOptions: {
-      ssl: false,
-      sslmode: "disable",
+    cookieOptions: {
+      sameSite: "lax",
+      secure: false,
     },
+
+    // databaseDriverOptions: {
+    //   ssl: false,
+    //   sslmode: "disable",
+    // },
   },
 });
