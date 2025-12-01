@@ -3,6 +3,9 @@ import { loadEnv, defineConfig } from "@medusajs/framework/utils";
 loadEnv(process.env.NODE_ENV || "development", process.cwd());
 
 module.exports = defineConfig({
+  // admin: {
+  //   backendUrl: process.env.MEDUSA_BACKEND_URL || "http://localhost:9000",
+  // },
   projectConfig: {
     databaseUrl: process.env.DATABASE_URL,
     http: {
@@ -16,10 +19,26 @@ module.exports = defineConfig({
       sameSite: "lax",
       secure: false,
     },
-
     // databaseDriverOptions: {
     //   ssl: false,
     //   sslmode: "disable",
     // },
   },
+  // modules: [
+  //   {
+  //     resolve: "@medusajs/medusa/file",
+  //     options: {
+  //       providers: [
+  //         {
+  //           resolve: "@medusajs/medusa/file-local",
+  //           id: "local",
+  //           options: {
+  //             upload_dir: "static",
+  //             backend_url: "http://localhost:9000/static",
+  //           },
+  //         },
+  //       ],
+  //     },
+  //   },
+  // ],
 });
